@@ -28,6 +28,7 @@ function knightMoves(start, goal) {
   if (!isValid(start) || !isValid(goal)) return console.log('Invalid input');
 
   if (start[0] === goal[0] && start[1] === goal[1]) {
+    print([start]);
     return start;
   }
   let queue = [];
@@ -60,8 +61,11 @@ function knightMoves(start, goal) {
   return [];
 }
 
-knightMoves([0, 8], [7, 7]);
+knightMoves([-2, -2], [9, 9]);
 // output 'Invalid input'
+
+knightMoves([3, 3], [3, 3]);
+// output [3,3]
 
 knightMoves([0, 0], [1, 2]);
 // output [[0,0],[1,2]]
